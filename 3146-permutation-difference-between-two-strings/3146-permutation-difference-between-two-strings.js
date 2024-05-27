@@ -2,8 +2,8 @@ var findPermutationDifference = function(string, string2) {
     
     let sum=0
   
-    for (let index=0;index < string.length; index++){
-        let val1=string[index]
+    for (let index=0; index < string.length; index++){
+
         let index2=string2.indexOf(string[index])      
       
         sum += Math.abs(index-index2)
