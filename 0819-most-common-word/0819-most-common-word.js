@@ -14,12 +14,14 @@ var mostCommonWord =function (sentence, banned) {
     console.log(word_array)
 
     for (const current_word of word_array) {
-        
+
         const notBanned = !(bannedSet.has(current_word))
         
         if (notBanned) {
             
-            map[current_word] = (map[current_word] || 0) + 1;
+            let frequency = map[current_word]
+            
+            map[current_word] = (frequency || 0) + 1
 
             if (map[current_word] > maxCount) {
                 maxCount = map[current_word]
