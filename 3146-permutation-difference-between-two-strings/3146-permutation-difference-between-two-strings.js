@@ -6,7 +6,7 @@ var findPermutationDifference = function(string, string2) {
 
         let index2=string2.indexOf(string[index])      
       
-        sum += Math.abs(index-index2)
+        sum += Math.abs(index2-index)
     }
     return sum
 }
