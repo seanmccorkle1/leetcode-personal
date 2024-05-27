@@ -1,8 +1,8 @@
 var mostCommonWord =function (sentence, banned) {
  
     const bannedSet = new Set(banned)
-    const word_array = sentence.toLowerCase().split(/\W+/).filter(Boolean)
-
+    const word_array = sentence.toLowerCase().split(/\W+/).filter(e=>Boolean(e)==true)
+    
     // Use \W+ to split by non-word characters and filter to remove empty strings
 
     const map = {}
@@ -18,7 +18,6 @@ var mostCommonWord =function (sentence, banned) {
         const notBanned = !(bannedSet.has(currWord))
         
         if (notBanned) {
-            
             
             map[currWord] = (map[currWord] || 0) + 1
 
