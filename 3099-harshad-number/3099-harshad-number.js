@@ -1,14 +1,37 @@
-var sumOfTheDigitsOfHarshadNumber = function(x) {
-    
+var log = function (...args) {
+    // Do something with args, for example, logging them
 
-    digit_sum = x.toString().split("").reduce((a,b)=>a+Number(b),0)
-    // let digit_sum =  [...x.toString()].map(stringnum=>Number(stringnum)).reduce((sum,curr)=>sum+curr,0)
-    
-    if (x%digit_sum == 0){
+    // console.log(...[args].join("|"))
+
+    console.log([...args].join("|"))
+}
+
+log("log1", "log2")
+
+
+var sumOfTheDigitsOfHarshadNumber = function (x) {
+
+    let digit_sum = x.toString()
+        .split("").reduce(callback, 0)
+
+    // .reduce((a,b)=>a + Number(b),0)
+
+    if (x % digit_sum == 0) {
         return digit_sum
     }
 
     return -1
 }
 
-sumOfTheDigitsOfHarshadNumber(18)
+// var callback = (a,b) => {
+
+function callback(a,b) { 
+    return a+Number(b)
+
+    // (a, b) => Number(a) + Number(b)
+
+}
+
+console.log(sumOfTheDigitsOfHarshadNumber(18), 9) 
+
+// should return 9, the sum of the digits since
