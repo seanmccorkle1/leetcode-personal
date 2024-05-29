@@ -14,7 +14,7 @@ var sumOfTheDigitsOfHarshadNumber = function(x) {
 }
 
 
-let callback=(a,b)=> a+Number(b)
+callback=(a,b)=> a+Number(b)
 
 // function callback(a,b) { 
 //     return a+Number(b)
