@@ -1,29 +1,19 @@
+// BigInt is basically just Number()
+// which always converts it to base 10 
+// in the absence of a "radix" parameter like parseInt(string, radix)
+
 var addBinary = (bitstring1, bitstring2) => {
+    
+    // "0b" is binary, not bigint
+    let first_as_decimal =BigInt(`0b${bitstring1}`) 
+    let second_as_decimal = BigInt("0b"+ bitstring2)
+    
+    let twenty=first_as_decimal+second_as_decimal
+    
+    let twenty_as_binary=    twenty.toString(2)
+    return twenty_as_binary
 
-    let twenty=BigInt(`0b${bitstring1}`)  + BigInt(`0b${bitstring2}`)
-    return twenty.toString(2)
 
-    // + BigInt(`0b${bitstring2})`)
-
-    let v = BigInt(`0b${bitstring1}`)
-
-    // treat "11" as 3 with "0b11"
-    let binaryForm1 = "0b" + bitstring1
-    let binaryForm2 = "0b" + bitstring2
-
-    parseInt("11", 2)
-
-    // BigInt is basically just Number()
-    // which always converts it to base 10 
-    // in the absence of a "radix" parameter like parseInt(string, radix)
-
-    parseInt(binaryForm1, 2)
-
-    let decimalNum1 = BigInt(binaryForm1)
-    let decimalNum2 = BigInt(binaryForm2)
-
-    let sumAsDecimal = decimalNum1 + decimalNum2
-    return sumAsDecimal.toString(2)
 }
 
 
