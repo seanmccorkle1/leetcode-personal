@@ -18,7 +18,9 @@ var simplifiedFractions =function(num) {
                 let div=eval(div_string)
 
                 // if its unique
-                if (!decimalSet.has(div)) {
+                
+                const fraction_is_unique = !decimalSet.has(div)
+                if (fraction_is_unique) {
                     decimalSet.add(div)
                     array.push(div_string)
                 }
