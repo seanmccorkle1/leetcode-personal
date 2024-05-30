@@ -13,15 +13,13 @@ var simplifiedFractions =function(num) {
         while (fast_index <= num) {
             
             if (fast_index > slow_index) {
-
-                // let div=slow_index / fast_index
+        
                 let div_string= slow_index+"/" + fast_index
-
                 let div=eval(div_string)
-                if (!decimalSet.has(div)) {
-                
-                    decimalSet.add(div)
 
+                // if its unique
+                if (!decimalSet.has(div)) {
+                    decimalSet.add(div)
                     result.push(div_string)
                 }
             }
