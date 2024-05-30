@@ -14,13 +14,14 @@ var simplifiedFractions =function(num) {
             
             if (fast_index > slow_index) {
 
-                let div=slow_index / fast_index
+                // let div=slow_index / fast_index
+                let div_string= slow_index+"/" + fast_index
 
+                let div=eval(div_string)
                 if (!decimalSet.has(div)) {
                 
                     decimalSet.add(div)
 
-                    let div_string= slow_index+"/" + fast_index
                     result.push(div_string)
                 }
             }
