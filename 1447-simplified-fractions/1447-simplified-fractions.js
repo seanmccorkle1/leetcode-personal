@@ -8,10 +8,10 @@ var simplifiedFractions =function(num) {
     for (let slow_index = 1; slow_index < num; slow_index++) {
 
         num
-        let fast_index = 2
+        let fast_index = slow_index+1
 
         while (fast_index <= num) {
-            
+
             if (fast_index > slow_index) {
         
                 let div_string= slow_index+"/" + fast_index
@@ -20,6 +20,7 @@ var simplifiedFractions =function(num) {
                 // if its unique
                 
                 const fraction_is_unique = !decimalSet.has(div)
+                
                 if (fraction_is_unique) {
                     decimalSet.add(div)
                     array.push(div_string)
