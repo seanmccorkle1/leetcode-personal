@@ -1,7 +1,7 @@
 var simplifiedFractions =function(num) {
 
     let decimalSet = new Set()
-    let result = []
+    let array = []
 
     num
 
@@ -20,19 +20,14 @@ var simplifiedFractions =function(num) {
                 // if its unique
                 if (!decimalSet.has(div)) {
                     decimalSet.add(div)
-                    result.push(div_string)
+                    array.push(div_string)
                 }
             }
             fast_index++
         }
     }
 
-    //  improves space complexity
-    // decimalSet=Array(...decimalSet)
-
-    decimalSet.clear()
-
-    return result
+    return array
 }
 
 // export default simplifiedFractions
