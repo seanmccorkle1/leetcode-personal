@@ -1,10 +1,8 @@
 var singleNumber = function(nums) {
-    
-    return nums.filter(num => nums.indexOf(num) == nums.lastIndexOf(num) )
 
     const numCount = new Map()
     const result = []
-    
+
     // Count the occurrences of each number
     for (const num of nums) {
         if (numCount.has(num)) {
@@ -24,4 +22,4 @@ var singleNumber = function(nums) {
     }
 
     return result;
-};
+}
