@@ -11,29 +11,7 @@ var scoreOfString = function (s) {
     return a.reduce((sum,curr,currIndex, array) => count += Math.abs((array[currIndex-1]) - curr))
 
 
-
-    let sum = 0
-
-    a
-
-
-    for (let index=1; index < a.length; index++) {
-
-        const num = a[index]
-        
-        Math.abs(sum+num)
-        
-        sum += Math.abs(a[index-1] - a[index])
-
-        sum
-
-    }
-    console.log(sum)
-    console.log(a)
-
-    return sum
 }
-
 
 console.log(scoreOfString("hello"), 13)
 
