@@ -1,42 +1,77 @@
-var simplifiedFractions =function(num) {
+var simplifiedFractions = (num) => {
 
-    let decimalSet = new Set()
-    let array = []
+    let index = 1
+    const array = []
 
-    num
+    const set = new Set()
 
-    for (let slow_index = 1; slow_index < num; slow_index++) {
+    while (index <= num) {
 
-        num
-        let fast_index = slow_index+1
+        // let nestedIndex = index + 1
 
-        while (fast_index <= num) {
+        // for (let nestedIndex = index + 1; nestedIndex <= num; nestedIndex++) {
 
-            if (fast_index > slow_index) {
-        
-                let div_string= slow_index+"/" + fast_index
-                let div=eval(div_string)
+        let nestedIndex = index
+        // while (nestedIndex <= num) {
 
-                // if its unique
-                
-                const fraction_is_unique = !decimalSet.has(div)
-                
-                if (fraction_is_unique) {
-                    decimalSet.add(div)
-                    array.push(div_string)
-                }
+        // while (++nestedIndex <= num) {
+
+        while (nestedIndex++ < num) {
+
+            nestedIndex
+            num
+
+            let quotient = index / nestedIndex
+
+            index
+            nestedIndex
+
+            if (set.has(quotient)) {
+                continue
             }
-            fast_index++
+            set.add(quotient)
+            set.add(index + "/" + nestedIndex)
+
+            // nestedIndex++
+
         }
+        index++
+
     }
 
-    return array
+    set
+    let strings=[...set].filter((e,i)=> i%2==1)
+    return strings
+
+    return [...set].filter((e,i)=>i %2==1)
+
+
 }
+
+
+console.log(simplifiedFractions(4),
+    ["1/2", "1/3", "1/4", "2/3", "3/4"])
 
 // export default simplifiedFractions
 
-console.log(simplifiedFractions(4),     ["1/2","1/3","1/4","2/3","3/4"])
 
+
+let result = ""
+let inc = 0
+
+
+do {
+    inc++
+    console.log(inc, "\n", result)
+    console.log(inc)
+    console.log("\n")
+    console.log(result)
+
+    result += `${inc}`
+}
+
+while (inc >=1 && inc <= 4)
+    
 // describe('calculator', () => {
 //     it('adds numbers', () => {
 //       expect(simplifiedFractions(4)).toBe(["1/2","1/3","1/4","2/3","3/4"])
@@ -44,9 +79,9 @@ console.log(simplifiedFractions(4),     ["1/2","1/3","1/4","2/3","3/4"])
 //     })
 // })
 
-    // it('multiplies numbers', () => {
-    //   const calculator = new Calculator();
-    //   expect(calculator.multiply(0, 2)).toBe(0);
-    //   expect(calculator.multiply(2, 0)).toBe(0);
-    //   expect(calculator.multiply(2, 2)).toBe(4);
-    // }
+// it('multiplies numbers', () => {
+//   const calculator = new Calculator();
+//   expect(calculator.multiply(0, 2)).toBe(0);
+//   expect(calculator.multiply(2, 0)).toBe(0);
+//   expect(calculator.multiply(2, 2)).toBe(4);
+// }
