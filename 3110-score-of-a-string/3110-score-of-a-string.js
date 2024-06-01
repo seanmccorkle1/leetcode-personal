@@ -6,7 +6,9 @@ var scoreOfString = function (s) {
     a
 
     let count=0
-    return a.reduce((sum,curr,index, array) => count += Math.abs((array[index-1]) - curr))
+    
+    // the index starts at *1* without an initialValue
+    return a.reduce((sum,curr,currIndex, array) => count += Math.abs((array[currIndex-1]) - curr))
 
 
 
