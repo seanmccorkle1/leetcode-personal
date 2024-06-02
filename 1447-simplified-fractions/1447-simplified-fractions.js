@@ -6,15 +6,15 @@ var simplifiedFractions = (num) => {
     const set = new Set()
 
     while (index <= num) {
-
+        
         // let nestedIndex = index + 1
 
         // for (let nestedIndex = index + 1; nestedIndex <= num; nestedIndex++) {
 
-        let nestedIndex = index
         // while (nestedIndex <= num) {
-
         // while (++nestedIndex <= num) {
+
+        let nestedIndex = index
 
         while (nestedIndex++ < num) {
 
@@ -38,19 +38,14 @@ var simplifiedFractions = (num) => {
         index++
 
     }
-
+    
     set
-    let strings=[...set].filter((e,i)=> i%2==1)
-    return strings
-
     return [...set].filter((e,i)=>i %2==1)
-
-
 }
 
 
-console.log(simplifiedFractions(4),
-    ["1/2", "1/3", "1/4", "2/3", "3/4"])
+// console.log(simplifiedFractions(4),
+    // ["1/2", "1/3", "1/4", "2/3", "3/4"])
 
 // export default simplifiedFractions
 
@@ -58,7 +53,6 @@ console.log(simplifiedFractions(4),
 
 let result = ""
 let inc = 0
-
 
 do {
     inc++
