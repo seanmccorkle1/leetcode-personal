@@ -17,10 +17,7 @@ var appendCharacters = function(string, substring) {
             return 0
         }
     }
-
-
     return substring.length - num_of_letters_in_substring_that_match
 }
 
-appendCharacters(string1 = "coaching", substring = "coding")
-
+appendCharacters(string = "coaching", substring = "coding")
