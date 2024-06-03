@@ -1,7 +1,8 @@
 var appendCharacters = function(string, substring) {
-    let index2 =0
-    // let len = substring.length
+    
     if (string.includes(substring))return 0
+    
+    let index2 =0
     let num_of_letters_in_substring_that_match = index2
 
     for(let index=0;index<string.length;index++){
@@ -14,11 +15,10 @@ var appendCharacters = function(string, substring) {
             index2++
         }
         
-        // if(substring.length===index2) {
-        //     return 0
-        // }
     }
-    return substring.length - num_of_letters_in_substring_that_match
+    let remaining_num_of_letters_needed = Math.abs(substring.length - num_of_letters_in_substring_that_match)
+
+    return remaining_num_of_letters_needed
 }
 
 appendCharacters(string = "coaching", substring = "coding")
