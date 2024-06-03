@@ -1,6 +1,7 @@
 var appendCharacters = function(string, substring) {
     let index2 =0
     // let len = substring.length
+    if (string.includes(substring))return 0
     let num_of_letters_in_substring_that_match = index2
 
     for(let index=0;index<string.length;index++){
