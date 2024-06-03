@@ -12,7 +12,7 @@ var appendCharacters = function(string, substring) {
             num_of_letters_in_substring_that_match++
             index2++
         }
-
+        
         if(substring.length===index2) {
             return 0
         }
@@ -22,5 +22,5 @@ var appendCharacters = function(string, substring) {
     return substring.length - num_of_letters_in_substring_that_match
 }
 
-appendCharacters(string = "coaching", substring = "coding")
+appendCharacters(string1 = "coaching", substring = "coding")
 
