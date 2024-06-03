@@ -13,9 +13,9 @@ var appendCharacters = function(string, substring) {
             index2++
         }
         
-        if(substring.length===index2) {
-            return 0
-        }
+        // if(substring.length===index2) {
+        //     return 0
+        // }
     }
     return substring.length - num_of_letters_in_substring_that_match
 }
