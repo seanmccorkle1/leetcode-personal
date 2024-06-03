@@ -16,7 +16,9 @@ var appendCharacters = function(string, substring) {
         }
         
     }
-    let remaining_num_of_letters_needed = (substring.length - num_of_letters_in_substring_that_match)
+    let total_length = substring.length
+    
+    let remaining_num_of_letters_needed = (total_length - num_of_letters_in_substring_that_match)
 
     return remaining_num_of_letters_needed
 }
