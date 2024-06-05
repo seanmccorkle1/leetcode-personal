@@ -15,12 +15,12 @@ var commonChars = function (array) {
 
         let b= array.every(e=>e.indexOf(l) != -1) ? letter_array.push(l): false
 
-        if (b){
+        // if (b){
             array=array.map(string=>string.replace(l, ""))
             // array
-        }
-        return
-
+        // }
+        
+        return 
     })
     return  letter_array
 }
