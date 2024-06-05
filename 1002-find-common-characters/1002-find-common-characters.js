@@ -19,20 +19,8 @@ var commonChars = function (array) {
             array=array.map(string=>string.replace(l, ""))
             // array
         }
+        return
 
     })
-
     return  letter_array
-    
-    array
-    for (let letter of first) {
-        if (array.every(e=>e.indexOf(letter) != -1)){
-            letter_array.push(letter)
-        }
-    }
-
-    letter_array
-//
-
-
 }
