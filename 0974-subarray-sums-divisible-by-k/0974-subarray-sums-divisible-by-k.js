@@ -1,9 +1,8 @@
 var subarraysDivByK = function(A, K) {
-
+    
     let freq = new Array(K).fill(0)
-
-    freq[0]=1 //  Explained below
-
+    
+    freq[0]=1 // 
     // This is the accumulative sum of the elements of A
 
     let sum = 0;
@@ -27,4 +26,6 @@ var subarraysDivByK = function(A, K) {
     return count
     
 
-};
+}
+
+console.log(subarraysDivByK({array: [4,5,0,-2,-3,1], k: 5}),  7)
